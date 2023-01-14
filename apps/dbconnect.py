@@ -3,13 +3,11 @@ import pandas as pd
 
 def getdblocation():
 
-    db = psycopg2.connect(
- 
-        host='localhost',
-        database='172proje',
-        user='postgres',
-        port=5432,
-        password='myr69'
+import os
+def getdblocation():
+    DATABASE_URL = os.environ['DATABASE_URL']
+    db = psycopg2.connect(DATABASE_URL, sslmode='require')
+    return db
     )
 
     return db
