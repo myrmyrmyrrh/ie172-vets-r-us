@@ -6,9 +6,6 @@ def getdblocation():
     DATABASE_URL = os.environ['DATABASE_URL']
     db = psycopg2.connect(DATABASE_URL, sslmode='require')
     return db
-    )
-
-    return db
 
 print(getdblocation())
 
