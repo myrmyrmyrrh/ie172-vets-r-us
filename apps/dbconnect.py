@@ -1,8 +1,6 @@
 import psycopg2
 import pandas as pd
 
-def getdblocation():
-
 import os
 def getdblocation():
     DATABASE_URL = os.environ['DATABASE_URL']
